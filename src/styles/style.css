@@ -1,0 +1,127 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  background-color: #ff69b4;
+  color: white;
+  padding-inline: 2rem;
+  padding-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .hero h1 {
+  text-transform: uppercase;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: relative;
+}
+ul a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  left: 0;
+  bottom: -3px; /* Distância do texto */
+  transition: width 0.6s ease-in-out;
+}
+ul a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  right: 0;
+  bottom: -3px; /* Distância do texto */
+  transition: width 0.5s ease-in-out;
+}
+ul a:hover::before {
+  width: 100%;
+}
+ul a:hover::after {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 7vw;
+  padding-block: 3vh;
+}
+section p {
+  max-width: 600px;
+  text-align: justify;
+  font-size: 24px;
+}
+section img {
+  border-radius: 7px;
+}
+
+.sobre-outubro-rosa {
+  background-color: #ffd9ec;
+}
+
+.detalhes {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.imagens-dicas {
+  background-color: #ffd9ec;
+  padding-block: 3rem;
+}
+
+footer {
+  background-color: #ff69b4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 7vw;
+  padding-block: 4vh;
+}
+footer .info-autor {
+  text-align: center;
+}
+footer img {
+  width: 60px;
+}
+footer .social-icons {
+  cursor: pointer;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=style.css.map */
