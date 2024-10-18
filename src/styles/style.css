@@ -23,20 +23,19 @@ header .hero {
 header .hero h1 {
   text-transform: uppercase;
 }
-
-ul {
+header ul {
   display: flex;
   gap: 2rem;
   list-style-type: none;
 }
-ul a {
+header ul a {
   text-decoration: none;
   color: white;
   font-size: 22px;
   text-transform: uppercase;
   position: relative;
 }
-ul a::after {
+header ul a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -46,7 +45,7 @@ ul a::after {
   bottom: -3px; /* Distância do texto */
   transition: width 0.6s ease-in-out;
 }
-ul a::before {
+header ul a::before {
   content: "";
   position: absolute;
   width: 0;
@@ -56,10 +55,10 @@ ul a::before {
   bottom: -3px; /* Distância do texto */
   transition: width 0.5s ease-in-out;
 }
-ul a:hover::before {
+header ul a:hover::before {
   width: 100%;
 }
-ul a:hover::after {
+header ul a:hover::after {
   width: 100%;
 }
 
@@ -110,8 +109,16 @@ footer {
   padding-inline: 7vw;
   padding-block: 4vh;
 }
-footer .info-autor {
+footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  margin-top: 7px;
+}
+footer .informacoes-extras {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 footer img {
   width: 60px;

@@ -30,52 +30,53 @@ header {
       text-transform: uppercase;
     }
   }
-}
 
-
-ul {
-  display: flex;
-  gap: 2rem;
-  list-style-type: none;
-
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
-    text-transform: uppercase;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 1px;
-      background-color: #fff;
-      left: 0;
-      bottom: -3px; /* Distância do texto */
-      transition: width 0.6s ease-in-out;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 1px;
-      background-color: #fff;
-      right: 0;
-      bottom: -3px; /* Distância do texto */
-      transition: width 0.5s ease-in-out;
-    }
-
-    &:hover::before {
-      width: 100%;
-    }
-
-    &:hover::after {
-      width: 100%;
+  ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+  
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 22px;
+      text-transform: uppercase;
+      position: relative;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #fff;
+        left: 0;
+        bottom: -3px; /* Distância do texto */
+        transition: width 0.6s ease-in-out;
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #fff;
+        right: 0;
+        bottom: -3px; /* Distância do texto */
+        transition: width 0.5s ease-in-out;
+      }
+  
+      &:hover::before {
+        width: 100%;
+      }
+  
+      &:hover::after {
+        width: 100%;
+      }
     }
   }
 }
+
+
 
 // Estilos das seções
 
@@ -139,8 +140,18 @@ footer {
   padding-inline: 7vw;
   padding-block: 4vh;
 
-  .info-autor {
+  ul {
+    list-style-type: none;
+
+    li {
+      margin-top: 7px;
+    }
+  }
+
+  .informacoes-extras{
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   img {
